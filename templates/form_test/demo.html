@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <title>Форми</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<!--{% extends 'base.html' %}
+{% block content %}-->
+    <h1 class="text-center mb-3">Форма</h1>
+    <!--{% if latest_questions_list %}
+        {% for question in latest_question_list %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <p class="lead">{{ question.question_text}}</p>
+	        <href= " {% url 'form_test:detail'  question.id %}" class="btn btn-primary btn-sm">...</a>
+          	       <href= " {% url 'form_test:results' question.id %}" class="btn btn-secondary btn-sm">...</a>
+
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}-->
+        <p>
+          Заповніть дані у обов'язкових полях.
+        <form action="" class="was-validated">
+    <div class="form-group">
+      <label for="uname">Верхній коридор:</label>
+      <input type="text" class="form-control" id="top_c" placeholder="Верхній коридор" name="top_cor" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Нижній коридор:</label>
+      <input type="text" class="form-control" id="bottom_c" placeholder="Нижній коридор" name="bottom_cor" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Ціна покупки:</label>
+      <input type="text" class="form-control" id="price_b" placeholder="Ціна покупки" name="price_buy" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Ціна продажу:</label>
+      <input type="text" class="form-control" id="price_s" placeholder="Ціна продажу" name="price_sell" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Розмір покупки:</label>
+      <input type="text" class="form-control" id="quant_b" placeholder="Розмір покупки" name="quant_buy" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Розмір продажу:</label>
+      <input type="text" class="form-control" id="quant_s" placeholder="Розмір продажу" name="quant_sell" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Максимальна позиція:</label>
+      <input type="text" class="form-control" id="max_pos" placeholder="Максимальна позиція" name="max_position" required>
+      <div class="valid-feedback">Годиться</div>
+      <div class="invalid-feedback">Будьте ласкаві, заповніть це поле</div>
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember2"> Згоден на усе.
+        <!--<div class="valid-feedback">Годиться.</div>-->
+        <div class="invalid-feedback">Погодьтеся з умовами для продовження.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Ввійти</button>
+  </form>
+        </p>
+    <!--{% endif %}
+{% endblock %}-->
+</html>
